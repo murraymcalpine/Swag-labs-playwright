@@ -1,5 +1,4 @@
-// playwright.config.js
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   globalSetup: './global-setup.js',
@@ -12,5 +11,19 @@ export default defineConfig({
     ['list'],                                        // console output
     ['html', { outputFolder: 'playwright-report' }], // HTML report with screenshots/videos
   ],
-});
 
+  projects: [
+    {
+      name: 'Chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'Firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'WebKit',
+      use: { ...devices['Desktop Safari'] },
+    },
+  ],
+});
