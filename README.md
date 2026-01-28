@@ -21,23 +21,36 @@ npx playwright install
 ```
 5: Run the tests
 ```bash
-npm playwright tests
+npm run test
 ```
 Note: The tests will run against Chrome, Firefox and Safari at this time. 
-
+## To run the all the tests against a speific browser
+Chrome
+```bash
+npm run test:chrome
+```
+Firefox
+```bash
+npm run test:firefox
+```
+Safari
+```bash
+npm run test:safari
+```
 ## How to run individual tests files
 Login Screen tests
 ```bash
-npx playwright test login-tests.spec.js
+npm run test:login
 ```
 Testing the Ordering Process
 ```bash
-npx playwright test ordering-tests.spec.js
+npm run test:ordering
 ```
 Checking the Inventory page
 ```bash
-npx playwright test inventory-tests.spec.js
+npm run test:inventory
 ```
+Note: The tests will run against Chrome, Firefox and Safari at this time. 
 ## How to run open the test report after a scuessful run
 ```bash
 npx playwright show-report

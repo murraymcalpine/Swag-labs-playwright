@@ -4,12 +4,19 @@
   "description": "Exploring Playwright testing using the dummy website https://www.saucedemo.com/",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test --reporter=line,html",
+    "test:chrome": "playwright test --project=Chromium --reporter=line,html",
+    "test:firefox": "playwright test --project=Firefox --reporter=line,html",
+    "test:safari": "playwright test --project=WebKit --reporter=line,html",
+    "test:login": "playwright test tests/login-tests.spec.js --reporter=line,html",
+    "test:inventory": "playwright test tests/inventory-tests.spec.js --reporter=line,html",
+    "test:ordering": "playwright test tests/ordering-tests.spec.js --reporter=line,html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.57.0"
+    "@playwright/test": "^1.57.0",
+    "allure-playwright": "^3.4.5"
   }
 }

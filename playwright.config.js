@@ -9,7 +9,7 @@ export default defineConfig({
   },
   reporter: [
     ['list'],                                        // console output
-    ['html', { outputFolder: 'playwright-report' }], // HTML report with screenshots/videos
+    ['html', { outputFolder: 'playwright-report' }],// HTML report with screenshots/videos
   ],
 
   projects: [
