@@ -23,6 +23,7 @@ npx playwright install
 ```bash
 npm playwright tests
 ```
+Note: The tests will run against Chrome, Firefox and Safari at this time. 
 
 ## How to run individual tests files
 Login Screen tests
