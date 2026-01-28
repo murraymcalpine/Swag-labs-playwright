@@ -2,6 +2,8 @@ import { test, expect } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
 
+test.use({ storageState: undefined }); // no saved login
+
 //Clearing the screenshots folder before tests run
 test.beforeAll(() => {
   const folder = path.join(process.cwd(), 'screenshots', 'login-tests');
