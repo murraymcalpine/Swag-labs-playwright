@@ -46,6 +46,6 @@ test('Navigate to an item and back to inventory page', async ({ page }) => {
   //Click back to inventory
     await page.locator('[data-test="back-to-products"]').click();
 
-  // Assert we're back on the inventory page
+  //Assert we're back on the inventory page
     await expect(page).toHaveURL(/.*inventory\.html/);
     });
